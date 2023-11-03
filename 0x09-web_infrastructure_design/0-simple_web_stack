@@ -1,0 +1,38 @@
+Whiteboard URL
+https://imgur.com/qyipZjF
+
+Web infrastructure design
+0. Simple Web Stack
+
+About This Infrastructure
+
+What is a server
+A server is a piece of computer hardware or software that provides functionality for other programs or devices, called "clients".
+
+The function of a domain name.
+A domain name helps users find their way around the Internet. It is a string of text that maps to a numeric IP address, used to access a website from client software.
+
+The type of DNS record www is in www.foobar.com. www.foobar.com uses an A record. 
+This can be checked by running dig www.foobar.com. Note: the results might be different but for the infrastructure in this design, an A record is used. Address Mapping record (A Record) - also known as a DNS host record, stores a hostname and its corresponding IPv4 address.
+
+The function of the web server.
+The web server, serves web pages to clients upon their request, it does this over the protocol HTTP.
+
+The function of the application server.
+The application server provides its clients with access to what is commonly called business logic, which generates dynamic content;that is, it’s code that transforms data to provide the specialized functionality offered by a business, service, or application.
+
+The role of the database.
+The database is used to maintain a collection of organized information that can easily be accessed, updated and managed.
+
+What the server uses to communicate with the client (computer of the user requesting the website).
+The Communication between the client and the server occurs over the internet network through the TCP/IP protocol suite.
+
+Issues with this infrastructure
+SPOF (Single Point Of Failure).
+Failure of the server causes whole network to collapse
+
+Downtime when maintenance needed.
+When the system is not being productive due to required maintenance work (like deploying new code web server needs to be restarted).
+
+Cannot scale if too much incoming traffic.
+It is a bit unwieldy when it comes to scaling your site for higher loads.
