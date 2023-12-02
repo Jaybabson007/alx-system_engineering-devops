@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# A bash script that uses ssh to connect to the provided server using the private key
+# ~/.ssh/school with the user ubuntu.
+ssh -i ~/.ssh/school ubuntu@325896-web-01
