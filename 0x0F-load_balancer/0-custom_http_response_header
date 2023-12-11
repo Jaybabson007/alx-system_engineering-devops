@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#A bash script that doubles the number of webservers and adds new configs
+
+# To install nginx
+apt-get  update ; apt-get -y install nginx
+
+string="http {\n\tadd_header X-Served-By \"$HOSTNAME\";"
+sudo sed -i "s/http {/$string/" /etc/nginx/nginx.conf
+# To restart nginx
+sudo service nginx restart
